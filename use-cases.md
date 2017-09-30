@@ -55,6 +55,9 @@
 - Items being added to warehouse from supplier
 
 1. // Jose put use case here
-2. // Joel put use case here
+2. Receiving Supplier Transport
+Transport vehicle from a supplier arrives at company location. A warehouse manager / receiver verifies the number of
+items expected to be received, and the cargo is unloaded. Inventory counts are updated for received items, and confirmation 
+of successful delivery is recorded. Deliveries expecting cargo from this shipment are made aware of new stock totals..
 3. // Patrick put use case here
 4. // Jitesh put use case here
