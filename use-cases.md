@@ -93,4 +93,9 @@ of successful delivery is recorded. Deliveries expecting cargo from this shipmen
 # Receive Shipment:
 Transport vehicle arrives at destination location. A receiver records the time that the delivery has arrived. The transport cargo is unloaded in parts, with each item being recorded into the location's inventory. Once the cargo is fully unloaded a printable receipt is generated to record the successful delivery.
 
-4. // Jitesh put use case here
+# Warehouse Delivery Departure: 
+1. Product id is selected and searched in warehouse.
+2. Product(or products ) are packed with right label and address.
+3. Product is scanned from warehouse and loaded in vehicle.
+4. Product reach destination either(client or another ware house to shipped to next location)
+5. Step 1-4 is repeated until product reach the customer and its recorded on system making cycle complete.
