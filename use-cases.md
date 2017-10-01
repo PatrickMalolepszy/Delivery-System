@@ -56,5 +56,6 @@
 
 1. // Jose put use case here
 2. // Joel put use case here
-3. // Patrick put use case here
+3. Receive Shipment:
+Transport vehicle arrives at destination location. A receiver records the time that the delivery has arrived. The transport cargo is unloaded in parts, with each item being recorded into the location's inventory. Once the cargo is fully unloaded a printable receipt is generated to record the successful delivery.
 4. // Jitesh put use case here
