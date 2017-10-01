@@ -54,7 +54,6 @@
 - Delivery fulfilled from location X to Y (driver story)
 - Items being added to warehouse from supplier
 
-1. // Jose put use case here
 ##Scope: Request delivery of materials to location
 
 ###Level: Sub-Function
@@ -86,7 +85,12 @@
 ###The frequency of Occurrence:
 1. Demand vs supply, if supply is high the system will be continuous. If nobody needs it then the system will be at a stall
 
-2. // Joel put use case here
-3. Receive Shipment:
+# Receiving Supplier Transport
+Transport vehicle from a supplier arrives at company location. A warehouse manager / receiver verifies the number of
+items expected to be received, and the cargo is unloaded. Inventory counts are updated for received items, and confirmation 
+of successful delivery is recorded. Deliveries expecting cargo from this shipment are made aware of new stock totals..
+
+# Receive Shipment:
 Transport vehicle arrives at destination location. A receiver records the time that the delivery has arrived. The transport cargo is unloaded in parts, with each item being recorded into the location's inventory. Once the cargo is fully unloaded a printable receipt is generated to record the successful delivery.
+
 4. // Jitesh put use case here
