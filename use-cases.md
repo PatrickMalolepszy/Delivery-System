@@ -85,10 +85,6 @@
 -Frequency of Occurence:
 1. Depends on the demands of supply. If supply is high the system will be continous. If nobody needs it then they system will be at a stall
 
-
-
-
-
 2. // Joel put use case here
 3. // Patrick put use case here
 4. // Jitesh put use case here
