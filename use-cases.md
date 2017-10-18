@@ -79,10 +79,41 @@
 ### The frequency of Occurrence:
 1. Demand vs supply, if supply is high the system will be continuous. If nobody needs it then the system will be at a stall
 
+
 # Receiving Supplier Transport
-Transport vehicle from a supplier arrives at company location. A warehouse manager / receiver verifies the number of
-items expected to be received, and the cargo is unloaded. Inventory counts are updated for received items, and confirmation 
-of successful delivery is recorded. Deliveries expecting cargo from this shipment are made aware of new stock totals..
+#### Author: Joel Rorseth
+
+
+### Brief Format
+Transport vehicle from a supplier arrives at company location. A warehouse manager / receiver verifies 
+the number of items expected to be received, and the cargo is unloaded. Inventory counts are updated 
+for received items, and confirmation of successful delivery is recorded. Deliveries expecting cargo 
+from this shipment are made aware of new stock totals.
+
+
+### Casual Format
+*Main Success Scenario*: A supplier's transport vehicle arrives at the company location. A warehouse
+manager checks the delivery, confirming that every item expected to be received by the software has 
+been delivered. Cargo is unloaded, delivery is recorded as being successful. The updated inventory
+counts make the system aware of new stock to be filled in pending orders.
+
+*Alternate Scenarios:*
+
+If the manager determines that the delivery is missing expected items or is short in quantity, the
+cargo is unloaded anyways, however the software records only the actual amount received into inventory.
+A note or flag is set in the system to denote the shortage in expected inventory.
+
+If the manager determines that the delivery contains extra items or its quantity is in excess, then all
+cargo except for any excess is unloaded and recorded accurately into the inventory system. 
+
+If the manager determines that the delivery is missing some items *and* has also brought along extra items,
+only the amount anticipated by the delivery system is unloaded, with any excess being left on the truck.
+A note or flag is set in the system to denote the shortage in expected inventory.
+
+If the software system crashes or becomes unresponsive at any point, the delivery is received in full, or
+to the best of the manager's ability in regards to known stock totals. When working once again, the shipment
+is recorded with proper totals, which have been recorded by hand.
+
 
 # Receive Shipment:
 Transport vehicle arrives at destination location. A receiver records the time that the delivery has arrived. The transport cargo is unloaded in parts, with each item being recorded into the location's inventory. Once the cargo is fully unloaded a printable receipt is generated to record the successful delivery.
