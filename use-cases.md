@@ -35,7 +35,7 @@
 - Warehouse
 - Supplier (only deliver)
 #### Example properties
-- stock of items
+- the stock of items
 - owner
 - location
 
@@ -48,36 +48,24 @@
 # Use Cases:
 
 
-## Scope: Request delivery of materials to location
+# Request delivery of materials to location
+#### Author: Jose Alba
 
-### Level: Sub-Function
 
-### Primary Actor: Customers
+### Brief Format
+The store or warehouse has to request an item which will be processed by a POS system which will create the outline of how the item will be sent to the requested location. This item can be delivered by our 'driver' in either boat, plane, or truck. Once delivered to a warehouse or store it will be approved by the end-user.
 
-### Stakeholders and interest:
-1. Company: The store or warehouse wants to receive/send items
-2. Driver: The driver has to send the item via boat, plane, or truck(implements interface)
-3. System: Has to figure out how the items will get to the location it is assigned and by what methods
+### Casual Format
 
-### Preconditions: 
-1. The customer(Store) has to know what items they will request and this item has to be in stock from wherever they are receiving it 
-2. Method of delivery has been figured out by system
-3. For simplicity, there will be no external factor for delivery system that could affect delivery(etc Natural disaster)
+*Main Success Scenario*: A user request an item via the online system, which will implement an escrow system to ensure the trading of items is safe and secure. Once the system confirms that the items are in stock and the user has the minimum funds for the company the system will then determine the best way to deliver items; the delivery of items can happen by either boat, plane, or truck. Once the item is sent out on delivery or system will email back to the end-user if the transaction was complete and how long it should take to deliver. 
 
-### Main Success Scenario:
-1. User demands equipment(For example user might want 5,000 bananas)
-2. System figure out how to send supplies with the best route
-3. Supply is delivered
+*Alternate Scenarios*:
 
-### Extensions:
-1.Assumption right now is perfect world
+In order for the system to work the customer(store) should not be able to choose an item not currently in stock. This will be accomplished by having flags to check if the stock is not available if this proves true then the item should not be displayed to the end user.
 
-### Special Requirements: 
-1.Supply has to be in stock( stock supply cannot exceed demand )
-2.Customer has to have enough money to pay for the items requested
+If the demand of an item is higher than the current supply our system should prompt the user and tell them that there aren't enough items in stock. They will then be asked if they want to continue their purchase.
 
-### The frequency of Occurrence:
-1. Demand vs supply, if supply is high the system will be continuous. If nobody needs it then the system will be at a stall
+If the customer does not have enough money to purchase an item the escrow system should return the money back to the customer and tell the customer that the transaction failed due to lack of funding. By introducing an escrow system to the system we are ensuring that transactions such as these will not be a problem for our system.
 
 
 # Receiving Supplier Transport
@@ -85,22 +73,16 @@
 
 
 ### Brief Format
-Transport vehicle from a supplier arrives at company location. A warehouse manager / receiver verifies 
-the number of items expected to be received, and the cargo is unloaded. Inventory counts are updated 
-for received items, and confirmation of successful delivery is recorded. Deliveries expecting cargo 
-from this shipment are made aware of new stock totals.
+Transport vehicle from a supplier arrives at the company's location. A warehouse manager/receiver verifies the number of items expected to be received, and the cargo is unloaded. Inventory counts are updated for received items, and confirmation of successful delivery is recorded. Deliveries expecting cargo from this shipment are made aware of new stock totals.
 
 
 ### Casual Format
-*Main Success Scenario*: A supplier's transport vehicle arrives at the company location. A warehouse
-manager checks the delivery, confirming that every item expected to be received by the software has 
-been delivered. Cargo is unloaded, delivery is recorded as being successful. The updated inventory
-counts make the system aware of new stock to be filled in pending orders.
+*Main Success Scenario*: A supplier's transport vehicle arrives at the company location. A warehouse manager checks the delivery, confirming that every item expected to be received by the software has been delivered. Cargo is unloaded, delivery is recorded as being successful. The updated inventory counts make the system aware of new stock to be filled in pending orders.
 
 *Alternate Scenarios:*
 
 If the manager determines that the delivery is missing expected items or is short in quantity, the
-cargo is unloaded anyways, however the software records only the actual amount received into inventory.
+cargo is unloaded anyways, however, the software records only the actual amount received into inventory.
 A note or flag is set in the system to denote the shortage in expected inventory.
 
 If the manager determines that the delivery contains extra items or its quantity is in excess, then all
@@ -116,11 +98,11 @@ is recorded with proper totals, which have been recorded by hand.
 
 
 # Receive Shipment:
-Transport vehicle arrives at destination location. A receiver records the time that the delivery has arrived. The transport cargo is unloaded in parts, with each item being recorded into the location's inventory. Once the cargo is fully unloaded a printable receipt is generated to record the successful delivery.
+Transport vehicle arrives at the destination location. A receiver records the time that the delivery has arrived. The transport cargo is unloaded in parts, with each item being recorded into the location's inventory. Once the cargo is fully unloaded a printable receipt is generated to record the successful delivery.
 
 # Warehouse Delivery Departure: 
-1. Product id is selected and searched in warehouse.
+1. The product id is selected and searched in the warehouse.
 2. Product(or products ) are packed with right label and address.
-3. Product is scanned from warehouse and loaded in vehicle.
-4. Product reach destination either(client or another ware house to shipped to next location)
-5. Step 1-4 is repeated until product reach the customer and its recorded on system making cycle complete.
+3. The product is scanned from the warehouse and loaded in the vehicle.
+4. Product reach destination either(client or another warehouse to shipped to next location)
+5. Step 1-4 is repeated until the product reaches the customer and its recorded on the system making cycle complete.
