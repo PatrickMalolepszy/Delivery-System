@@ -1,0 +1,28 @@
+Main Success Scenario: product id is selected and searched in warehouse.product is scanned from warehouse and loaded in vehicle .
+product is scanned and stacked all products of same delivery location and area together . then recorded 
+if there will be charges for it or not. product(or products ) are packed with right label and address .
+Estimated time of Delivery of product is calculated and updated on system
+then product is delivered to customer on time in right condition and delivery is recorded on system .
+product reach destination either(client or another ware house to shipped to next location)  .
+
+Alternative Scenario :product id is selected and searched in warehouse.product is scanned from warehouse and loaded in vehicle .
+product is scanned and stacked all products of same delivery location and area together . then recorded 
+if there will be charges for it or not. product(or products ) are packed with right label and address .
+address on product is noted wrong .Estimated time of Delivery of product is calculated and updated on system. but this error of address
+disturbs the delivery cycle of product causeing delay in product delivery as product is returned to warehouse to be updated with right address
+then product is delivered to customer on time in right condition and delivery is recorded on system .
+product reach destination either(client or another ware house to shipped to next location)  . 
+
+
+Alternative Scenario :product id is selected and searched in warehouse.product is scanned from warehouse and loaded in vehicle .
+product is scanned and stacked all products of same delivery location and area together . then recorded 
+if there will be charges for it or not. product(or products ) are packed with right label and address .
+wrong product is loaded in wrong vehicle ( now its traveling to different location)
+ .Estimated time of Delivery of product is calculated and updated on system. but this error 
+disturbs the delivery cycle of product causeing delay in product delivery as product is returned to warehouse to be updated with right address
+then product is delivered to customer on time in right condition and delivery is recorded on system .
+product reach destination either(client or another ware house to shipped to next location)  . 
+
+Alternative Scenario :product id is selected and searched in warehouse.product quantity in database was not right ( might be because it might be broken).
+and because of it that product is not in warehouse. so have to transfer order to different warehouse location..
+  
