@@ -57,3 +57,7 @@ What to do when product needs to travel internationally? Eg duties, border clear
 Should the warehouse be able to shut down in the midst of loading a delivery?
 Explore options for backup and recovery of systems.
 
+
+### Reasons for choosing use case:
+
+Our group decided to make a fully dressed use case for the warehouse delivery system as it implements the most important features in our system. It is diverse enough where all the important features of the other use-cases is also  implemented in this use-case. This use-case also explains the most important details of our system: as it ranges from the request the customer has to make, to how the item will be picked from the manufacturing warehouse, and how the item is delivered to the customer. This use-case explains the general idea of our project and how it works.
