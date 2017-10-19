@@ -49,8 +49,17 @@ to the best of the manager's ability in regards to known stock totals. When work
 is recorded with proper totals, which have been recorded by hand.
 
 
-# Receive Shipment:
-Transport vehicle arrives at the destination location. A receiver records the time that the delivery has arrived. The transport cargo is unloaded in parts, with each item being recorded into the location's inventory. Once the cargo is fully unloaded a printable receipt is generated to record the successful delivery.
+# Manager Operations:
+#### Author: Patrick
+
+### Casual Format
+*Main Success Scenario*:
+Managers of the transport delivery system will be able to view the system at a larger scale. This view will provide content management options as well as information about the systems current state. This includes the number of items available across all warehouses, number and types of transport vehicles available. Managers will be responsible for adding new large items to the system. Managers will be able to add new warehouses and vehicles to the system.
+
+*Alternative Scenarios*:
+Manager access keys do not authenticate. This will cause the system to regret the user access to any information. It may be considered to have different levels of management which have different levels of access.
+
+System is off-line or not available. The manager will be able to see a cached version of the system at a previous time point, but will not be able to view the current system.
 
 # Warehouse Delivery Departure:
 #### Author: Jitesh ( edited by Patrick & Jose)
