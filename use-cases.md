@@ -1,52 +1,4 @@
-# Delivery System
-
-## Example Domain Objects:
-
-### Transport:
-- driver
-- cost / km
-- speed
-- weight capacity
-#### Example Transport implementations:
-- Boat
-- Airplane
-- Truck  
-
-### Driver
-- name
-- age
-- years experience
-- Type of license (boat, airplane, etc...)
-
-### Cargo:
-- list of items
-- total weight
-- total price
-
-### Item
-- has weight
-- name
-- quantity
-- price
-- id
-
-### Shipping & Receiving
-- Store
-- Warehouse
-- Supplier (only deliver)
-#### Example properties
-- the stock of items
-- owner
-- location
-
-### Payment
-- debit
-- cash
-- credit
-- crypto? (etc)
-
-# Use Cases:
-
+# Delivery System Use Cases:
 
 # Request delivery of materials to location
 #### Author: Jose Alba
@@ -100,9 +52,15 @@ is recorded with proper totals, which have been recorded by hand.
 # Receive Shipment:
 Transport vehicle arrives at the destination location. A receiver records the time that the delivery has arrived. The transport cargo is unloaded in parts, with each item being recorded into the location's inventory. Once the cargo is fully unloaded a printable receipt is generated to record the successful delivery.
 
-# Warehouse Delivery Departure: 
-1. The product id is selected and searched in the warehouse.
-2. Product(or products ) are packed with right label and address.
-3. The product is scanned from the warehouse and loaded in the vehicle.
-4. Product reach destination either(client or another warehouse to shipped to next location)
-5. Step 1-4 is repeated until the product reaches the customer and its recorded on the system making cycle complete.
+# Warehouse Delivery Departure:
+#### Author: Jitesh ( edited by Patrick & Jose)
+
+### Casual Format
+*Main Success Scenario*: Warehouse receives a request for a shipment and starts delivery operations. The system looks up each item and provides the location of where the item is stored. Each item is then scanned before it is loaded onto the transport vehicle(s). Once all items have been added to the transport vehicle the system prints a label for the load. The driver will take the label as it will provide instructions on the destination.
+
+*Alternative Scenarios:*
+If a product is loaded onto a vehicle it should first be scanned. The system should be able to detect if the item is suppose to be in this vehicle by comparing the address of where the vehicle is going and where the item is suppose to be shipped. If these items have identical address the item should be able to go on the truck; otherwise the system should indicate a flag and tell the worker that it should not be loaded.
+
+Warehouse receives an order to fulfill however has no transport vehicles available as all are in use. The system saves the order to a list which will be prompted to the warehouse workers when a vehicle becomes available for loading.
+
+If the product quantity in the database is incorrect the loaders will not be able to find items needed for shipment. This should be fixed by manually updating the database to its correct quantity. If the order is no longer able to be fulfilled at the current warehouse due to stock change it can be transferred elsewhere.
