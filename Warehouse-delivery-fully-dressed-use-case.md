@@ -34,7 +34,7 @@ System records receipt of loading of delivery vehicle. The inventory of the ware
 6. System prints a summary for the load.
 7. The driver will take a copy of the summary as it will provide their delivery instructions.
 
-* The main success scenario should occur with almost every delivery. The extensions are exception and deal with any external problems, because of this our extensions can technically be part of our main success scneario if the issue occurs*
+* The main.main success scenario should occur with almost every delivery. The extensions are exception and deal with any external problems, because of this our extensions can technically be part of our main.main success scneario if the issue occurs*
 
 ### Extensions:
 If a product is loaded onto a vehicle it should first be scanned. The system should be able to detect if the item is suppose to be in this vehicle by comparing the address of where the vehicle is going and where the item is suppose to be shipped. If these items have identical address the item should be able to go on the truck; otherwise the system should indicate a flag and tell the worker that it should not be loaded.
